@@ -15,6 +15,7 @@
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'androidx.navigation.safeargs'
 buildscript {
     ext {
         navigationVersion = '1.0.0-rc02'
@@ -29,6 +30,7 @@ buildscript {
         jcenter()
     }
     dependencies {
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
         classpath "com.android.tools.build:gradle:$gradleVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
